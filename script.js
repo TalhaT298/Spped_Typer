@@ -86,7 +86,7 @@ const gameOver = () => {
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, fixed, errorCount);
 
   // restart everything
   startTime = null;
@@ -100,7 +100,7 @@ const closeModal = () => {
   resultModal.classList.toggle("hidden");
 };
 
-const start = () => {
+const start = (startBtn) => {
   // If already started, do not start again
   if (startTime) return;
 
@@ -114,7 +114,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
@@ -125,7 +125,7 @@ const start = () => {
 };
 
 // START Countdown
-const out=startBtn.addEventListener("click", start);
+const countDown= startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
