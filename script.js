@@ -69,7 +69,7 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
   const fixed = Math.round(timeTaken);
-  
+
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
@@ -125,7 +125,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+const out=startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
