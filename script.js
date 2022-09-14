@@ -68,7 +68,8 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
-
+  const fixed = Math.round(timeTaken);
+  
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
