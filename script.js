@@ -115,7 +115,7 @@ const start = (startBtn) => {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
-      display.classList.remove("inactive");
+      countdownOverlay.classList.add("countdown");
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
