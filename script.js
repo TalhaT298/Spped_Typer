@@ -42,7 +42,7 @@ const typeController = (e) => {
 
   const newLetterCorrect = validate(newLetter);
 
-  if (newLetterCorrect) {
+  if(newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
@@ -50,13 +50,13 @@ const typeController = (e) => {
   }
 
   // check if given question text is equal to user typed text
-  if (questionText === userText) {
+  if(questionText === userText) {
     gameOver();
   }
 };
 
 const validate = (key) => {
-  if (key === questionText[userText.length - 1]) {
+  if(key === questionText[userText.length - 1]) {
     return true;
   }
   return false;
@@ -103,7 +103,7 @@ const closeModal = () => {
 
 const start = (startBtn) => {
   // If already started, do not start again
-  if (startTime) return;
+  if(startTime) return;
 
   let count = 3;
   countdownOverlay.style.display = "flex";
@@ -112,7 +112,7 @@ const start = (startBtn) => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count === 0) {
+    if(count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
@@ -126,7 +126,7 @@ const start = (startBtn) => {
 };
 
 // START Countdown
- startBtn.addEventListener("click", start);
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
@@ -135,7 +135,7 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-  const timeRounded=Math.round(timeSpent);
+  const timeRounded = Math.round(timeSpent);
 
 
   document.getElementById("show-time").innerText = `${startTime ? timeRounded : 0} seconds`;
