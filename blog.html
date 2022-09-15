@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+
+        h2 {
+            font-size: large;
+        }
+
+        header {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 75%;
+            margin: 3rem auto;
+            background-color: #cbc1c1;
+            padding: 2rem;
+        }
+
+        @media screen and (max-width: 700px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            main {
+                width: 100%;
+                margin: auto;
+                padding: 2rem;
+            }
+
+            h2 {
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog Page</h1>
+        <hr>
+    </header>
+    <main>
+        <h2>Question 01:Difference between Local Storage and Session Storage?</h2>
+        <blockquote><strong>Answer 01:</strong> localStorage:
+            1.Type of web storage object available in HTML 5 that allows storing data with no
+            expiration date
+            2.Designed for storage that spans multiple windows and it lasts beyond the current
+            session
+            Session Storage:
+            1.Type of web storage object available in HTML 5 that allows storing data for one
+            session
+            2.Allows the user to carry out a single transaction but
+            could be carrying out multiple transactions in different windows at the
+            same time
+        </blockquote>
+
+        <h2>Question 02: Difference between global scope and block scope?</h2>
+        <blockquote><strong>Answer 02:</strong> In a browser environment, the global scope is controlled by the window object while in Node.js, it's controlled by the global object.
+            Block scopes are what you get when you use if statements, for statements, and the like. You can also use them stand-alone with a simple begin-end curly braces {}, not to be confused with empty object literals.
+        </blockquote>
+
+        <h2>Question 03: How to work js event loop?</h2>
+        <blockquote><strong>Answer 03:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quia,
+            The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.
+        </blockquote>
+        <h2>Question 04: Write the types for which we get Undefined?</h2>
+        <blockquote><strong>Answer 04:</strong>undefined is a property of the global object. That is, it is a variable in global scope. The initial value of
+            undefined is the primitive value undefined.
+
+            A variable that has not been assigned a value is of type undefined. A method or statement also returns
+            undefined if the variable that is being evaluated does not have an assigned value. A function returns
+            undefined if a value was not returned
+        </blockquote>
+
+    </main>
+</body>
+
+</html>
