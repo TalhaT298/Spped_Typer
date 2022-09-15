@@ -128,7 +128,7 @@ const start = (startBtn) => {
 // START Countdown
 startBtn.addEventListener("click", start);
 
-// If history exists, show it
+// If history exists, show itt
 displayHistory();
 
 // Show typing time spent
