@@ -134,6 +134,8 @@ body {
   justify-content: center; /* Center horizontally */
   align-items: center;
   padding-top: 100px;
+  font-size: small;
+  
 }
 .buttons {
   display: flex;
