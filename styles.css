@@ -126,7 +126,10 @@ body {
   color: white;
   display: block;
 }
-
+.title3 {
+  color: white;
+  display: block;
+}
 .buttons {
   display: flex;
   justify-content: center;
